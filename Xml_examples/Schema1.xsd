@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<!-- 根元素 -->
+	<xs:element name="book"></xs:element>
+	
+	<xs:complexType name="bookType">
+		<xs:sequence>
+			<xs:element name="bookName" type="xs:string"></xs:element>
+			<xs:element name="bookAuthor" type="xs:string"></xs:element>
+			<xs:element name="bookPrice" type="xs:float"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 使用 targetNamespace -->
+<student stuno="1" score="88" xmlns="http://targetNamespace.cn"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://targetNamespace.cn simpleType.xsd">
+	  <name>Zeke</name>
+	  <age>21</age>
+	  <!-- 使用xs:list -->
+	  <hobby>basketball football</hobby>
+</student>

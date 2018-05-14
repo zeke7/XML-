@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- 直接在文档中写约束 -->
+<!-- <!DOCTYPE students[
+	<!ELEMENT students (student+)>
+	<!ELEMENT student (name, age, gender)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT gender (#PCDATA)>
+]> -->
+
+
+<!-- 引入外部.dtd文件 -->
+<!-- <!DOCTYPE students SYSTEM "refdtd.dtd">-->
+
+<!-- 使用外部公公共 DTD -->
+<!-- 格式： <!DOCTYPE 根元素 PUBLIC "dtd文件" "dtd网址"> -->
+
+<students>
+	
+	<student>
+		<name>Zeke1</name>
+		<age>21</age>
+		<gender>Male</gender>
+	</student>
+
+	<student>
+		<name>Zeke2</name>
+		<age>21</age>
+		<gender>Male</gender>
+	</student>
+
+</students>
