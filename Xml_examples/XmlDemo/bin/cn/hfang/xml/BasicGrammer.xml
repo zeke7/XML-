@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<students>
+	
+	<student stuno="01">
+		<name>Zeke1</name>
+		<!-- 转义字符 -->
+		<age>age &lt;21</age>
+	</student>
+
+	<!-- 不使用转义字符, 使用CDATA区 -->
+	<![CDATA[
+	<student stuno="02">
+		<name>Zeke2</name>
+		<age>age<22</age>
+	</student>
+	]]>
+
+</students>
+
+<!-- 注释 -->
+<!-- <students>
+	<student stuno="01">
+		<name>Zeke</name>
+	</student>
+</students>
+ -->

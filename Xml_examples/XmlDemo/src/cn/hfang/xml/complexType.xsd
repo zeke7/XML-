@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://targetNamespace.cn">
+
+
+	<xs:element name="student">
+		<!-- 复杂数据类型，表示元素和元素的层级关系或属性关系 -->
+		<xs:complexType>
+			<!-- xs:sequence 内部元素有序 默认出现一次 范围0-1-->
+			<!-- xs:all 内部元素无序 默认出现一次 范围0-1-->
+			<!-- xs:choice 内部元素选一个 默认出现一次 范围0-1-->
+			<xs:sequence minOccurs="1" maxOccurs="3">
+				<xs:element name="name" type="xs:string"></xs:element>
+				<xs:element name="age" type="xs:int"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

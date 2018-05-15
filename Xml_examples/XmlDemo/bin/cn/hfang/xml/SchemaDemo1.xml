@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xsi:noNamespaceSchemaLocation 直接从硬盘上进行查找-->
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="Schema1.xsd">
+	<!-- xs:sequence 约定了顺序 -->
+	<bookName>BOOK1</bookName>
+	<bookAuthor>AUTHOR1</bookAuthor>
+	<bookPrice>102.0</bookPrice>
+</book>

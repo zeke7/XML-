@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE students[
+	<!-- * 元素出现次数: "?"->0~1次，"*"->0~n次，"+"->1~n次 -> -->
+	<!ELEMENT students (student+)>
+	<!-- 枚举子元素: <!ELEMENT 元素名 (子元素1|子元素2|子元素3|...)> 任意一个子元素，可以在后面加上元素出现次数, "?","*",和"+"。 -->
+	<!-- <!ELEMENT student (name|age|gender)?> -->
+	<!-- 指定多个子元素(name, age, gender) -->
+	<!-- 按照顺序出现 -->
+	<!ELEMENT student (name, age, gender)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age ANY>
+	<!ELEMENT gender EMPTY>
+]>
+
+<students>
+	<student>
+		<name>Zeke1</name>
+		<age>21</age>
+		<!-- <age/> -->
+		<gender/>
+	</student>
+</students>

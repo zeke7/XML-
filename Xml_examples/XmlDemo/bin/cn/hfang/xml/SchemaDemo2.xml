@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 使用 targetNamespace -->
+<student stuno="1" xmlns="http://targetNamespace.cn"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://targetNamespace.cn Schema2.xsd">
+	  <name>Zeke</name>
+	  <age>20</age>
+</student>

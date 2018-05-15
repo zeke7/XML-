@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+属性约束的基本格式：
+	<!ATTLIST 元素名
+		属性名1 属性类型 设置说明
+		属性名2 属性类型 设置说明
+		......
+	> 
+-->
+<!-- 
+	设置说明:
+		#REQUIRED 必须
+		#IMPLIED 可选
+ -->
+
+ <!-- 
+	属性类型:
+		CDATA: 文本数据
+		Enumerated: 列表中的一个
+		ID: 属性值唯一，不能以数字开头
+  -->
+
+<!DOCTYPE students[
+	<!ELEMENT students (student+)>
+	<!ELEMENT student (name, age, gender)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ATTLIST student stuno ID #REQUIRED>
+	<!ATTLIST student gender (Male|Female) #IMPLIED>
+]>
+
+<students>
+	<student stuno="s_1" gender="Male">
+		<name>Zeke1</name>
+		<age>21</age>
+	</student>
+	<student stuno="s_2" gender="Male">
+		<name>Zeke2</name>
+		<age>21</age>
+	</student>
+</students>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://targetNamespace.cn">
+
+
+	<xs:element name="student">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"></xs:element>
+				<xs:element name="age" type="xs:int"></xs:element>
+				<xs:element name="hobby" type="hobbies"></xs:element>
+			</xs:sequence>
+			<!-- 引用属性 -->
+			<xs:attribute ref="stuno"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- 属性组 -->
+	<xs:attributeGroup name="stuattr">
+		<xs:attribute name="stuno" type="xs:int" use="required"></xs:attribute>
+		<!-- 使用simpleType -->
+		<xs:attribute name="score" type="scores"></xs:attribute>
+	</xs:attributeGroup>
+
+	<!-- 0-100的数值约束 -->
+	<xs:simpleType name="scores">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0"></xs:minInclusive>
+			<xs:maxInclusive value="100"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="hobbies">
+		<xs:list itemType="xs:string"></xs:list>
+	</xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://targetNamespace.cn">
+
+	<!-- <xs:element name="student">
+		
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"></xs:element>
+				<xs:element name="age" type="xs:int"></xs:element>
+			</xs:sequence>
+			<xs:attribute name="stuno" type="xs:int" use="required"></xs:attribute>
+		</xs:complexType>
+
+	</xs:element> -->
+
+	<xs:element name="student">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"></xs:element>
+				<xs:element name="age" type="xs:int"></xs:element>
+			</xs:sequence>
+			<!-- 引用属性 -->
+			<xs:attribute ref="stuno"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<!-- 单个属性 -->
+	<xs:attribute name="stuno" type="xs:int" use="required"></xs:attribute>
+	<!-- 属性组 -->
+	<xs:attributeGroup name="stuattr">
+		<xs:attribute name="stuno" type="xs:int" use="required"></xs:attribute>
+		<xs:attribute name="score" type="xs:int"></xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

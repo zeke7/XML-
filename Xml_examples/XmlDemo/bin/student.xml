@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><students>
+	<student number="s001">
+		<name>ZEKE1</name>
+		<age>30</age>
+		<gender>Male</gender>
+	</student>
+	
+	<student number="s005">
+		<name>MARY</name>
+		<age>20</age>
+		<gender>Female</gender>
+	</student>
+	
+</students>
